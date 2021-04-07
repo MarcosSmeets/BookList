@@ -1,0 +1,47 @@
+﻿@page
+@model BookList.Pages.SingUpModel
+@{
+}
+
+
+<br />
+<h3 class="text-info">Sing Up</h3><br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="account.username">Username</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="account.username" class="form-control" placeholder="Type your username" />
+            </div>
+            <span asp-validation-for="account.username" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="account.password">Password</label>
+            </div>
+            <div class="col-6">
+                <input type="password" asp-for="account.password" class="form-control" placeholder="Type your password" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="account.email">E-mail</label>
+            </div>
+            <div class="col-6">
+                <input type="email" asp-for="account.email" class="form-control" placeholder="Type your e-mail" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Sing Up" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back to Menu</a>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,70 @@
+﻿@page
+@model BookList.Pages.CreateModel
+@{
+}
+
+<br/>
+
+<h2 class="text-info">Create new book</h2><br/>
+
+<div class="border container" style="padding:30px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="book.bookName">Name</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="book.bookName" class="form-control" />
+            </div>
+            <span asp-validation-for="book.bookName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="book.authorName">Author</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="book.authorName" class="form-control" />
+            </div>
+            <span asp-validation-for="book.authorName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="book.genre">Genre</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="book.genre" class="form-control" />
+            </div>
+            <span asp-validation-for="book.genre" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="book.sinopseBook">Sinopse</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="book.sinopseBook" class="form-control" />
+            </div>
+            <span asp-validation-for="book.sinopseBook" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="book.yearRelease">Release Year</label>
+            </div>
+            <div class="col-6">
+                <input asp-for="book.yearRelease" class="form-control" />
+            </div>
+            <span asp-validation-for="book.yearRelease" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="BookList" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+ }
